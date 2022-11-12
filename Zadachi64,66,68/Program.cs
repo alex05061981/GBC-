@@ -2,27 +2,27 @@
 //N = 5 -> "5, 4, 3, 2, 1"
 //N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-//int n = InputInt("Введите положительное число");
-//int m = 1;
-//if (n < 1)
+int n = InputInt("Введите положительное число");
+int m = 1;
+if (n < 1)
 {
-    //Console.WriteLine("Ввели не положительное число");
+    Console.WriteLine("Ввели не положительное число");
 }
-//Console.WriteLine(NaturalNumber(n, m));
+Console.WriteLine(NaturalNumber(n, m));
 
-//int NaturalNumber(int n, int m)
+int NaturalNumber(int n, int m)
 {
-    //if (n == m)
-        //return n;
-    //else
-        //Console.Write($"{NaturalNumber(n, m + 1)}, ");
-    //return m;
+    if (n == m)
+        return n;
+    else
+        Console.Write($"{NaturalNumber(n, m + 1)}, ");
+    return m;
 }
 
-//int InputInt(string output)
+int InputInt(string output)
 {
-    //Console.WriteLine(output);
-    //return int.Parse(Console.ReadLine());
+    Console.WriteLine(output);
+    return int.Parse(Console.ReadLine());
 }
 
 
@@ -30,21 +30,21 @@
 //M = 1; N = 15 -> 120
 //M = 4; N = 8. -> 30
 
-//int m = InputInt("Введите M:");
-//int n = InputInt("Введите N:");
-//Console.WriteLine($"Сумма элементов от {m} до {n} = {CountNaturalSum(m, n)}");
+int m = InputInt("Введите M:");
+int n = InputInt("Введите N:");
+Console.WriteLine($"Сумма элементов от {m} до {n} = {CountNaturalSum(m, n)}");
 
-//int InputInt(string output)
+int InputInt(string output)
 {
-    //Console.Write(output);
-    //return int.Parse(Console.ReadLine());
+    Console.Write(output);
+    return int.Parse(Console.ReadLine());
 }
 
-//int CountNaturalSum(int m, int n)
+int CountNaturalSum(int m, int n)
 {
-    //if (m == n)
-       // return n;
-    //return n + CountNaturalSum(m, n - 1);
+    if (m == n)
+        return n;
+    return n + CountNaturalSum(m, n - 1);
 }
 
 
